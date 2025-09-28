@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amanda & Jespers Bröllop</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'PT Serif', serif;
+      font-weight: 400;
+      background-color: #ffffff;
+      color: #9d9b95;
+      text-align: center;
+    }
+
+    /* Top Image */
+    .header-image {
+      width: 40%;
+      max-width: 900px;
+      margin: 0px auto 10px auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .sub-image {
+      width: 10%;
+      max-width: 300px;
+      margin: 0px auto 10px auto;
+      display: block;
+      border-radius: 50%;
+    }
+
+    /* Navigation Menu */
+    nav {
+      background-color: #ffffff;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #9d9b95;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #e4e2de;
+    }
+
+    /* Countdown Timer */
+    .countdown-section {
+      margin: 40px 0;
+    }
+
+    .countdown-section h2 {
+      color: #5d3a00;
+      margin-bottom: 20px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .time-box {
+      background-color: #e3d5ca;
+      padding: 20px 30px;
+      border-radius: 10px;
+      min-width: 80px;
+    }
+
+    .time-box span {
+      display: block;
+      font-size: 36px;
+      font-weight: bold;
+      color: #5d3a00;
+    }
+
+    .time-box label {
+      display: block;
+      margin-top: 5px;
+      font-size: 16px;
+      color: #5d3a00;
+    }
+
+    /* Main Content - Two Columns */
+    .content {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
+      text-align: left;
+      line-height: 1.8;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    h1, h2 {
+      color: #9d9b95;
+      font-family: 'PT Serif', serif;
+      font-weight: 400;
+    }
+
+    a {
+      color: #5d3a00;
+      text-decoration: underline;
+    }
+
+    a:hover {
+      color: #a97155;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Image -->
+  <img src="images/wedding-banner.png" alt="Wedding Banner" class="header-image">
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="#our-story">VÄLKOMMEN</a></li>
+      <li><a href="#details">BRÖLLOPET</a></li>
+      <li><a href="#info">INFO</a></li>
+      <li><a href="#rsvp">O.S.A</a></li>
+      <li><a href="#gallery">ÖNSKELISTA</a></li>
+      <li><a href="#contact">KONTAKT</a></li>
+    </ul>
+  </nav>
+
+  <!-- Countdown Section -->
+  <div class="countdown-section">
+    <h2>Snart är det dags! 🕊️</h2>
+    <div class="countdown">
+      <div class="time-box">
+        <span id="months">0</span>
+        <label>Månader</label>
+      </div>
+      <div class="time-box">
+        <span id="days">0</span>
+        <label>Dagar</label>
+      </div>
+      <div class="time-box">
+        <span id="hours">0</span>
+        <label>Timmar</label>
+      </div>
+      <div class="time-box">
+        <span id="minutes">0</span>
+        <label>Minuter</label>
+      </div>
+      <div class="time-box">
+        <span id="seconds">0</span>
+        <label>Sekunder</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+
+    <div>
+      <h1 id="our-story">Välkomna på bröllop - 25 Juli 2026</h1>
+      <p>Vi är så glada att ni vill fira vår stora dag med oss!</p>
+
+      <h2 id="details">Bröllopets detaljer</h2>
+      <p>
+        📍 Plats: Asa Herrgård <br>
+        📅 Datum: 25 Juli 2026 <br>
+        ⏰ Tid: Vigsel börjar 14:00
+      </p>
+    </div>
+
+    <div>
+      <h2 id="rsvp">RSVP</h2>
+      <p>
+        Vänligen svara senast [datum]. <br>
+        <a href="mailto:your-email@example.com">Klicka här för att OSA via e-post</a>
+      </p>
+
+      <h2 id="gallery">Önskelista & Galleri</h2>
+      <p>Vi kommer snart att dela en önskelista och foton från vår resa här!</p>
+
+      <h2 id="contact">Kontakt</h2>
+      <p>Har du frågor? <br> Kontakta oss på <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Countdown Script -->
+  <script>
+    const weddingDate = new Date("July 25, 2026 14:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = weddingDate - now;
+
+      if (diff < 0) {
+        document.querySelector(".countdown").innerHTML = "<h2>Vi är redan gifta! 🎉</h2>";
+        clearInterval(timer);
+        return;
+      }
+
+      const totalSeconds = Math.floor(diff / 1000);
+      const totalMinutes = Math.floor(totalSeconds / 60);
+      const totalHours = Math.floor(totalMinutes / 60);
+      const totalDays = Math.floor(totalHours / 24);
+
+      const months = Math.floor(totalDays / 30); // approximate months
+      const days = totalDays % 30;
+      const hours = totalHours % 24;
+      const minutes = totalMinutes % 60;
+      const seconds = totalSeconds % 60;
+
+      document.getElementById("months").innerText = months;
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }
+
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>

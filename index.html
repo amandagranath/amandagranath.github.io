@@ -1,105 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanda & Jespers Bröllop</title>
+  <title>Amanda & Jespers Bröllop - Coming Soon</title>
+
+  <!-- Google Fonts (optional for a nicer font) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #f8f5f2;
-      color: #444;
-      text-align: center;
-    }
-
-    /* Top Image */
-    .header-image {
-      width: 100%;
-      max-width: 900px;
-      margin: 30px auto 10px auto;
-      display: block;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    /* Navigation Menu */
-    nav {
-      background-color: #e3d5ca;
-      padding: 15px 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-
-    nav ul {
-      list-style: none;
       padding: 0;
-      margin: 0;
+      font-family: 'PT Serif', serif;
+      background-color: #ffffff;
       display: flex;
       justify-content: center;
-      gap: 30px;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #444;
     }
 
-    nav a {
-      text-decoration: none;
-      color: #5d3a00;
-      font-weight: bold;
-      font-size: 18px;
-      transition: color 0.3s;
+    .coming-soon {
+      max-width: 90%;
+      width: 700px; /* adjust as needed */
     }
 
-    nav a:hover {
-      color: #a97155;
+    .coming-soon img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
     }
 
-    /* Main Content */
-    .content {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.8;
+    /* Optional: add a subtle fade-in */
+    .coming-soon img {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top Image -->
-  <img src="your-image.jpg" alt="Wedding Banner" class="header-image">
-
-  <!-- Menu -->
-  <nav>
-    <ul>
-      <li><a href="#our-story">Our Story</a></li>
-      <li><a href="#details">Wedding Details</a></li>
-      <li><a href="#rsvp">RSVP</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-    </ul>
-  </nav>
-
-  <!-- Content -->
-  <div class="content">
-    <h1 id="our-story">Welcome to Our Wedding</h1>
-    <p>
-      We are so excited to celebrate our special day with you!  
-      Here you’ll find all the details about our story, wedding plans, and how to RSVP.
-    </p>
-
-    <h2 id="details">Wedding Details</h2>
-    <p>
-      📍 Venue: [Your Venue Name] <br>
-      📅 Date: [Your Wedding Date] <br>
-      ⏰ Time: [Ceremony Time]
-    </p>
-
-    <h2 id="rsvp">RSVP</h2>
-    <p>
-      Please let us know if you can join us by [RSVP Date].  
-      <a href="mailto:your-email@example.com">Click here to RSVP via email</a>.
-    </p>
-
-    <h2 id="gallery">Gallery</h2>
-    <p>
-      We will share photos of our journey and special moments here soon!
-    </p>
+  <div class="coming-soon">
+    <img src="images/coming-soon.png" alt="Coming Soon">
   </div>
 
 </body>
