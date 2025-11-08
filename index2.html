@@ -1,332 +1,637 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanda & Jespers Bröllop</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>JESPER & AMANDA — 25 juli 2026</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    html {
-      scroll-behavior: smooth; /* smooth scrolling for anchor links */
-    }
-
-    body {
-      margin: 0;
-      font-family: 'PT Serif', serif;
-      font-weight: 400;
-      background-color: #ffffff;
-      color: #9d9b95;
-      text-align: center;
-    }
-
-    /* Top Image */
-    .header-image {
-      width: 40%;
-      max-width: 900px;
-      margin: 0px auto 10px auto;
-      display: block;
-      border-radius: 10px;
-    }
-
-    .sub-image {
-      width: 50%;
-      max-width: 300px;
-      margin: 0px auto 10px auto;
-      display: inline-block;
-    }
-
-    /* Navigation Menu */
-    nav {
-      background-color: #ffffff;
-      padding: 15px 0;
-      position: sticky; /* stick to top */
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #9d9b95;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #a97155;
-    }
-
-    /* Countdown Timer */
-    .countdown-section {
-      margin: 40px 0;
-    }
-
-    .countdown-section h2 {
-      color: #9d9b95;
-      margin-bottom: 20px;
-    }
-
-    .countdown {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .time-box {
-      background-color: #e4e2de;
-      padding: 20px 30px;
-      border-radius: 10px;
-      min-width: 80px;
-    }
-
-    .time-box span {
-      display: block;
-      font-size: 36px;
-      font-weight: bold;
-      color: #9d9b95;
-    }
-
-    .time-box label {
-      display: block;
-      margin-top: 5px;
-      font-size: 16px;
-      color: #9d9b95;
-    }
-
-    /* Main Content - Single Column */
-    .content {
-      max-width: 800px;
-      margin: 20px auto;
-      padding: 0 20px;
-      text-align: left;
-      line-height: 1.8;
-    }
-
-    h1, h2 {
-      color: #9d9b95;
-      font-family: 'PT Serif', serif;
-      font-weight: 400;
-    }
-
-    h3 {
-      color: #9d9b95;
-      font-family: 'PT Serif', serif;
-      font-weight: 900;
-      font-size: 18px;
-      font-style: bold;
-    }
-
-    a {
-      color: #9d9b95;
-      text-decoration: underline;
-    }
-
-    a:hover {
-      color: #a97155;
-    }
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  margin: 20px 0;
-}
-.info-item {
-  background-color: #f9f8f6;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: left;
-}
-.info-item h3 {
-  margin-top: 0;
-}
-.schedule {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.schedule-item {
-  flex: 1;
-  background-color: #f9f8f6;
-  padding: 20px 10px;
-  border-radius: 10px;
-  text-align: center;
-  font-weight: 300;
-  color: #9d9b95;
-}
-   
-  </style>
+    <style>
+         :root {
+            --cream: #f5f2ec;
+            --paper: #fbfaf8;
+            --sage: #6A766A;
+            --sage-2: #6A766A;
+            --muted: #7b776f;
+            --panel-radius: 18px;
+            --card-gap: 18px;
+            --max-width: 1100px;
+        }
+        
+        * {
+            box-sizing: border-box
+        }
+        
+        html {
+            scroll-behavior: smooth
+        }
+        
+        body {
+            margin: 0;
+            font-family: "times new roman", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+            background: linear-gradient(180deg, var(--cream) 0%, #f3f1ee 100%);
+            color: var(--sage-2);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.6;
+        }
+        
+        .wrap {
+            max-width: var(--max-width);
+            margin: 24px auto;
+            padding: 20px;
+        }
+        /* big top name */
+        
+        header.top {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .names {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(28px, 6.6vw, 60px);
+            line-height: 0.95;
+            margin: 0;
+            letter-spacing: 0.6px;
+            color: var(--sage-2);
+        }
+        
+        .sub {
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+        }
+        /* layout: two-column cards like reference */
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--card-gap);
+            align-items: start;
+            margin-top: 22px;
+        }
+        /* On wide screens use two-column layout with narrow right column */
+        
+        @media(min-width:900px) {
+            .grid {
+                grid-template-columns: 62% 36%;
+                gap: 26px;
+            }
+        }
+        /* Left tall card - large photo with vertical date overlay and intro text under */
+        
+        .card-main {
+            background: var(--cream);
+            overflow: hidden;
+        }
+        
+        .photo-wrap {
+            position: relative;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #6A766A;
+        }
+        
+        .photo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: grayscale(70%) contrast(94%);
+        }
+        /* vertical stacked date on left card (centered over image, stacked numbers) */
+        
+        .vertical-date {
+            position: center;
+            left: 22px;
+            top: 18px;
+            padding: 10px 14px;
+            text-align: center;
+            font-family: "Playfair Display", serif;
+            color: var(--sage-2);
+        }
+        
+        .vertical-date .d {
+            display: block;
+            font-size: 3.05rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--cream);
+        }
+        
+        .vertical-date small {
+            display: block;
+            margin-top: 6px;
+            color: var(--muted);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+        }
+        
+        .card-main .card-inner {
+            padding: 22px;
+            background-color: var(--cream);
+        }
+        
+        .intro-text {
+            color: var(--sage);
+            font-size: 1rem;
+        }
+        /* right column timeline card */
+        
+        .card-side {
+            background: var(--paper);
+            padding: 18px;
+            position: relative;
+        }
+        /* vertical timeline - lines and times on left/right of line */
+        
+        .timeline {
+            position: relative;
+            padding: 12px 10px;
+        }
+        
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: linear-gradient(180deg, rgba(63, 92, 75, 0.12), rgba(63, 92, 75, 0.06));
+            border-radius: 2px;
+        }
+        
+        .tl-item {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            padding: 18px 6px;
+            position: relative;
+        }
+        /* left content and right content alternate */
+        
+        .tl-left {
+            width: 48%;
+            text-align: right;
+            padding-right: 10px
+        }
+        
+        .tl-right {
+            width: 48%;
+            text-align: left;
+            padding-left: 10px
+        }
+        
+        .dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--paper);
+            border: 2px solid var(--sage-2);
+            box-shadow: 0 4px 12px rgba(63, 92, 75, 0.08);
+        }
+        
+        .time {
+            font-family: "Playfair Display", serif;
+            color: var(--sage-2);
+            font-size: 1rem;
+            letter-spacing: 0.6px;
+        }
+        
+        .desc {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-top: 6px;
+        }
+        /* Dresscode card (wide, full width under both columns on small screens) */
+        
+        .dress-card {
+            background: var(--sage);
+            color: #fff;
+            border-radius: var(--card-radius);
+            padding: 22px;
+            margin-top: 20px;
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        
+        .dress-left h3 {
+            margin: 0;
+            font-family: "Playfair Display", serif;
+            font-size: 1.15rem;
+            color: #fff;
+        }
+        
+        .swatches {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px
+        }
+        
+        .sw {
+            width: 34px;
+            height: 26px;
+            border-radius: 6px;
+            border: 2px solid rgba(255, 255, 255, 0.08)
+        }
+        /* location + RSVP block below cards - single-column feel */
+        
+        .foot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            margin-top: 20px;
+        }
+        
+        @media(max-width:720px) {
+            .foot-grid {
+                grid-template-columns: 1fr
+            }
+        }
+        
+        .loc-card,
+        .rsvp-card {
+            background: var(--paper);
+            border-radius: var(--card-radius);
+            padding: 18px;
+            border: 1px solid rgba(63, 92, 75, 0.04);
+            box-shadow: 0 8px 26px rgba(63, 92, 75, 0.03);
+        }
+        
+        .loc-card h3,
+        .rsvp-card h3 {
+            font-family: "Playfair Display", serif;
+            margin: 0 0 8px 0;
+            color: var(--sage-2)
+        }
+        
+        .loc-card p,
+        .rsvp-card p {
+            color: var(--muted);
+            margin: 0 0 6px 0
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 14px;
+            background: var(--sage-2);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-item {
+            background-color: var(--sage);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        
+        .info-item h3 {
+            margin-top: 0;
+        }
+        /* Countdown Timer */
+        
+        .countdown-section {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .countdown-section h2 {
+            color: #9d9b95;
+            margin-bottom: 20px;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .time-box {
+            background-color: var(--sage);
+            padding: 20px 30px;
+            border-radius: 10px;
+            min-width: 80px;
+        }
+        
+        .time-box span {
+            display: block;
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--cream);
+        }
+        
+        .time-box label {
+            display: block;
+            margin-top: 5px;
+            font-size: 16px;
+            color: var(--cream);
+        }
+        
+        footer {
+            margin-top: 28px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.95rem;
+            padding-bottom: 30px
+        }
+        /* mobile tweaks to look like long mobile card */
+        
+        @media(max-width:900px) {
+            .photo-wrap {
+                min-height: 520px
+            }
+            .vertical-date {
+                left: 16px;
+                top: 16px
+            }
+            /* timeline above main on narrow screens like reference? keep right column visible */
+            .grid {
+                grid-template-columns: 1fr
+            }
+        }
+        /* small screens make timeline items more compact */
+        
+        @media(max-width:420px) {
+            .photo-wrap {
+                min-height: 460px
+            }
+            .vertical-date .d {
+                font-size: 0.98rem
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <!-- Top Image -->
-  <img src="images/wedding-banner.png" alt="Wedding Banner" class="header-image">
+    <div class="wrap">
 
-  <!-- Navigation Menu -->
-  <nav>
-    <ul>
-      <li><a href="#our-story">VÄLKOMMEN</a></li>
-      <li><a href="#day-one">DAGEN INNAN</a></li>
-      <li><a href="#details">BRÖLLOPSDAGEN</a></li>
-      <li><a href="#info">BRA ATT VETA</a></li>
-      <li><a href="#rosa">O.S.A</a></li>
-      <li><a href="#gallery">ÖNSKELISTA</a></li>
-      <li><a href="#contact">KONTAKT</a></li>
-    </ul>
-  </nav>
+        <header class="top" role="banner">
+            <div class="sub">Välkommen till bröllopet mellan</div>
 
-  <!-- Countdown Section -->
-  <div class="countdown-section">
-    <h2>Snart är det dags! 🕊️</h2>
-    <div class="countdown">
-      <div class="time-box">
-        <span id="months">0</span>
-        <label>Månader</label>
-      </div>
-      <div class="time-box">
-        <span id="days">0</span>
-        <label>Dagar</label>
-      </div>
-      <div class="time-box">
-        <span id="hours">0</span>
-        <label>Timmar</label>
-      </div>
-      <div class="time-box">
-        <span id="minutes">0</span>
-        <label>Minuter</label>
-      </div>
-      <div class="time-box">
-        <span id="seconds">0</span>
-        <label>Sekunder</label>
-      </div>
+            <h1 class="names">JESPER &amp; AMANDA</h1>
+            <div class="sub">25 juli 2026 — Asa Herrgård</div>
+        </header>
+
+
+        <div class="grid">
+
+
+            <!-- Left large card -->
+            <article class="card-main" aria-labelledby="welcome-title">
+                <div class="photo-wrap" role="img" aria-label="Amanda och Jesper - bild">
+                    <!-- Replace with your photo; it's full-bleed -->
+                    <div class="vertical-date" aria-hidden="false">
+                        <span class="d">25</span>
+                        <span class="d">07</span>
+                        <span class="d">2026</span>
+
+                    </div>
+                </div>
+
+                <div class="card-inner">
+                    <p class="intro-text" style="margin-top:10px;">
+                        Hejhej! Jesper Bergström &amp; Amanda Granath här. Välkomna på vårt bröllop som kommer firas på Asa Herrgård som ligger 37 km från Växjö centrum. Vi ser så mycket fram emot denna dagen och att ni gör oss sällskap. Asa Herrgård är en idyllisk plats nära
+                        natur och sjö. Herrgården har både relax och hotell på området.
+                    </p>
+                </div>
+            </article>
+
+            <!-- Right narrow timeline card -->
+            <aside class="card-side" aria-labelledby="timeline-title">
+                <h3 id="timeline-title" style="font-family:Playfair Display,serif;margin:0 0 6px 0;color:var(--sage-2)">Bröllopsdagen</h3>
+                <div class="timeline" role="list">
+
+                    <div class="tl-item" role="listitem">
+                        <div class="tl-left">
+                            <div class="time">15:00</div>
+                            <div class="desc">Vigsel</div>
+                        </div>
+                        <div class="dot" aria-hidden="true"></div>
+                        <div class="tl-right">
+                            <div style="opacity:0.9;font-weight:600;color:var(--sage-2)">Ceremoni</div>
+                            <div class="desc">Vigselceremoni på herrgårdens gårdsplan</div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item" role="listitem">
+                        <div class="tl-left">
+                            <div class="time">15:30</div>
+                            <div class="desc">Brudskål &amp; mingel</div>
+                        </div>
+                        <div class="dot" aria-hidden="true"></div>
+                        <div class="tl-right">
+                            <div style="opacity:0.9;font-weight:600;color:var(--sage-2)">Mingel</div>
+                            <div class="desc">Tårta och välkomstdrinkar</div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item" role="listitem">
+                        <div class="tl-left">
+                            <div class="time">18:00</div>
+                            <div class="desc">Middag</div>
+                        </div>
+                        <div class="dot" aria-hidden="true"></div>
+                        <div class="tl-right">
+                            <div style="opacity:0.9;font-weight:600;color:var(--sage-2)">Trerätters</div>
+                            <div class="desc">Middag och tal</div>
+                        </div>
+                    </div>
+
+                    <div class="tl-item" role="listitem">
+                        <div class="tl-left">
+                            <div class="time">21:00</div>
+                            <div class="desc">Dans &amp; fest</div>
+                        </div>
+                        <div class="dot" aria-hidden="true"></div>
+                        <div class="tl-right">
+                            <div style="opacity:0.9;font-weight:600;color:var(--sage-2)">Fest</div>
+                            <div class="desc">Bröllopsdans och kvällsfest</div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+        </div>
+        <!-- end grid -->
+
+        <div class="grid">
+
+
+
+            <!-- Right narrow timeline card -->
+            <aside class="card-side" aria-labelledby="timeline-title">
+                <h3 id="timeline-title" style="font-family:Playfair Display,serif;margin:0 0 6px 0;color:var(--sage-2)">Dagen innan</h3>
+                <p style="margin-top:8px;color:var(--muted)">Eftersom många kommer resa en liten bit och kommer till Herrgården redan på fredagen så vill vi utnyttja även fredagen till att umgås och ha kul tillsammans. Vi kommer att ha lite enklare häng där vi bjuder på grillad hamburgare och valfri
+                    dryck. Vi kommer även hyra deras bastu med flertalet badtunnor som vi alla kan njuta av. Hoppas att så många som möjligt vill vara med även detta innan den stora dagen.</p>
+            </aside>
+            <!-- Left large card -->
+            <article class="card-main" aria-labelledby="welcome-title">
+                <div class="photo-wrap" role="img" aria-label="Amanda och Jesper - bild">
+                    <!-- Replace with your photo; it's full-bleed -->
+                    <div class="vertical-date" aria-hidden="false">
+                        <span class="d">25</span>
+                        <span class="d">07</span>
+                        <span class="d">2026</span>
+
+                    </div>
+                </div>
+
+
+            </article>
+        </div>
+        <!-- end grid -->
+
+
+        <!-- Dresscode band (full width style under grid) -->
+        <div class="dress-card" role="region" aria-labelledby="dress-title">
+            <div class="dress-left">
+
+
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Klädsel</h3>
+                        <p>Kavaj</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Barn</h3>
+                        <p>Barn är underbara men den här dagen väljer vi att fira i vuxet sällskap. Spädbarn och ammande barn är självklart välkomna.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Mat</h3>
+                        <p>Förrätt, huvudrätt och efterrätt. Vi bjuder på dryck såväl under middagen som i baren efteråt. Vid eventuella allergier eller önskemål om specialkost, vänligen meddela oss i god tid.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Boende</h3>
+                        <p>Vi rekommenderar att bo på Asa Herrgård. Annars finns vandrarhem i närheten.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Transport</h3>
+                        <p>För er som inte ska bo på herrgården och behöver transport efter festen så kan ni ringa Växjö Taxi och ange att ni är på bröllop i Asa herrgård så får ni 10%.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Tal</h3>
+                        <p>Tal under middagen är frivilligt. Men vill du hålla tal, köra en lek eller något annat kul är du varmt välkommen. Meddela gärna våra toastmasters Ida & Jane så planerar vi in detta.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Location and RSVP area -->
+        <div class="foot-grid">
+            <section class="loc-card" aria-labelledby="loc-title">
+                <h3 id="loc-title">Plats</h3>
+                📍 Plats: Asa Herrgård, Asa 1, 363 94 Lammhult <br> 📅 Datum: 25 Juli 2026 <br> ⏰ Tid: Vigsel börjar 14:00
+                <p style="margin-top:8px;color:var(--muted)">Adress, vägbeskrivning och förslag på boende. Herrgården erbjuder rum och relax; boka gärna i god tid.</p>
+                <a class="btn" href="https://maps.google.com" target="_blank" rel="noopener">Öppna karta</a>
+            </section>
+
+            <section class="rsvp-card" aria-labelledby="rsvp-title">
+                <h3 id="rsvp-title">O.S.A</h3>
+                <p style="margin-top:8px;color:var(--muted)">Vänligen svara senast <strong>25 maj 2026</strong>. Ange gärna eventuella allergier i meddelandet.</p>
+                <a class="btn" href="mailto:amandagranath@gmail.com?subject=O.S.A%20–%20Jesper%20%26%20Amanda%20(25%20juli%202026)">Skicka O.S.A via e-post</a>
+
+                <p style="margin-top:12px;color:var(--muted)">Eller SMS / ring: <strong>070-692-4851</strong></p>
+            </section>
+        </div>
+        <!-- Countdown Section -->
+        <div class="countdown-section">
+            <div class="sub">SNART ÄR DET DAGS!</div>
+            <Br>
+            <div class="countdown">
+                <div class="time-box">
+                    <span id="months">0</span>
+                    <label>Månader</label>
+                </div>
+                <div class="time-box">
+                    <span id="days">0</span>
+                    <label>Dagar</label>
+                </div>
+                <div class="time-box">
+                    <span id="hours">0</span>
+                    <label>Timmar</label>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">0</span>
+                    <label>Minuter</label>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">0</span>
+                    <label>Sekunder</label>
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer>© 2026 Jesper &amp; Amanda — Asa Herrgård</footer>
+
     </div>
-  </div>
+    <script>
+        const weddingDate = new Date("July 25, 2026 14:00:00").getTime();
 
-  <!-- Main Content -->
-  <div class="content">
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const diff = weddingDate - now;
 
-    <h2 id="our-story">Välkomna på bröllop - 25 Juli 2026</h2>
-    <p>Hejhej! Jesper Bergström & Amanda Granath här. Välkomna på vårt bröllop som kommer firas på Asa Herrgård som ligger 37 km från Växjö centrum. 
-Vi ser så mycket fram emot denna dagen och att ni gör oss sällskap. Asa Herrgård är en idyllisk plats som ligger nära natur och sjö. Asa Herrgård har både relax och hotell på samma område. </p>
+            if (diff < 0) {
+                document.querySelector(".countdown").innerHTML = "<h2>Vi är redan gifta! 🎉</h2>";
+                clearInterval(timer);
+                return;
+            }
 
-    <h2 id="day-one">Dagen innan bröllopet</h2>
-    <p> Eftersom många kommer resa en liten bit och kommer till Herrgården redan på fredagen så vill vi utnyttja även fredagen till att umgås och ha kul tillsammans. 
-       Vi kommer att ha lite enklare häng där vi bjuder på grillad hamburgare och valfri dryck. Vi kommer även
-      hyra deras bastu med flertalet badtunnor som vi alla kan njuta av. Hoppas att så många som möjligt vill vara med även detta innan den stora dagen.</p>
+            const totalSeconds = Math.floor(diff / 1000);
+            const totalMinutes = Math.floor(totalSeconds / 60);
+            const totalHours = Math.floor(totalMinutes / 60);
+            const totalDays = Math.floor(totalHours / 24);
 
-    <h2 id="details">Bröllopsdagen</h2>
-    <p>
+            const months = Math.floor(totalDays / 30); // approximate months
+            const days = totalDays % 30;
+            const hours = totalHours % 24;
+            const minutes = totalMinutes % 60;
+            const seconds = totalSeconds % 60;
 
-      📍 Plats: Asa Herrgård, Asa 1, 363 94 Lammhult <br>
-      📅 Datum: 25 Juli 2026 <br>
-      ⏰ Tid: Vigsel börjar 14:00
-    </p>
+            document.getElementById("months").innerText = months;
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
 
-    <h3>Schema för bröllopsdagen</h3>
-    <!-- Horizontal Schedule -->
-    <div class="schedule">
-      <div class="schedule-item"><i>Vigsel</i></div>
-      <div class="schedule-item"><i>Brudskål, tårta och mingel</i></div>
-      <div class="schedule-item"><i>Middag</i></div>
-      <div class="schedule-item"><i>Bröllopsdans</i></u></div>
-      <div class="schedule-item"><i>Fest</i></div>
-    </div>
-
-    <h2 id="info">Info</h2>
-<div class="info-grid">
-  <div class="info-item">
-    <h3>Klädsel</h3>
-    <p>Kavaj</p>
-  </div>
-  <div class="info-item">
-    <h3>Barn</h3>
-    <p>Barn är underbara men den här dagen väljer vi att fira i vuxet sällskap. Spädbarn och ammande barn är självklart välkomna.</p>
-  </div>
-  <div class="info-item">
-    <h3>Mat</h3>
-    <p>Förrätt, huvudrätt och efterrätt. Vi bjuder på dryck såväl under middagen som i baren efteråt. Vid eventuella allergier eller önskemål om specialkost, vänligen meddela oss i god tid.</p>
-  </div>
-  <div class="info-item">
-    <h3>Boende</h3>
-    <p>Vi rekommenderar att bo på Asa Herrgård. Annars finns vandrarhem i närheten.</p>
-  </div>
-  <div class="info-item">
-    <h3>Transport</h3>
-    <p>För er som inte ska bo på herrgården och behöver transport efter festen så kan ni ringa Växjö Taxi och ange att ni är på bröllop i Asa herrgård så får ni 10%.</p>
-  </div>
-  <div class="info-item">
-    <h3>Tal</h3>
-    <p>Tal under middagen är frivilligt. Men vill du hålla tal, köra en lek eller något annat kul är du varmt välkommen. Meddela gärna våra toastmasters Ida & Jane så planerar vi in detta.</p>
-  </div>
-</div>
-    <h2 id="rsvp">OSA</h2>
-    <p>
-      Vänligen svara senast [25 maj 2026].<br>
-      Mejla antingen till: amandagranath@gmail.com eller SMSA till 070-692-4851
-      <a href="mailto:your-email@example.com">Klicka här för att OSA via e-post</a>
-    </p>
-
-    <h2 id="gallery">Önskelista</h2>
-    <p>Vi kommer snart att dela en önskelista här!</p>
-
-    <h2 id="contact">Kontakt</h2>
-    <p>Har du frågor eller funderingar? <br> Kontakta oss på <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-
-  </div>
-
-   
-  <script>
-    const weddingDate = new Date("July 25, 2026 14:00:00").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const diff = weddingDate - now;
-
-      if (diff < 0) {
-        document.querySelector(".countdown").innerHTML = "<h2>Vi är redan gifta! 🎉</h2>";
-        clearInterval(timer);
-        return;
-      }
-
-      const totalSeconds = Math.floor(diff / 1000);
-      const totalMinutes = Math.floor(totalSeconds / 60);
-      const totalHours = Math.floor(totalMinutes / 60);
-      const totalDays = Math.floor(totalHours / 24);
-
-      const months = Math.floor(totalDays / 30); // approximate months
-      const days = totalDays % 30;
-      const hours = totalHours % 24;
-      const minutes = totalMinutes % 60;
-      const seconds = totalSeconds % 60;
-
-      document.getElementById("months").innerText = months;
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
-    }
-
-    updateCountdown();
-    const timer = setInterval(updateCountdown, 1000);
-  </script>
-
+        updateCountdown();
+        const timer = setInterval(updateCountdown, 1000);
+    </script>
 </body>
+
 </html>
