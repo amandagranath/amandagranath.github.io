@@ -115,6 +115,24 @@
         font-size: 15px;
         line-height: 1.6;
     }
+    /* LIST STYLE */
+    
+    .content-section ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+    
+    .content-section li {
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 14px 16px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.6;
+        font-style: normal;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
     /* TABLET */
     
     @media (max-width: 1200px) {
@@ -172,7 +190,8 @@
         right: 24px;
         font-size: 28px;
         cursor: pointer;
-        z-index: 10;
+        z-index: 9999;
+        /* increase this */
         color: #2b2b2b;
     }
     /* ===== TIMELINE ===== */
@@ -192,13 +211,15 @@
     }
     
     .timeline-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto auto auto;
+        display: flex;
         gap: 20px;
         text-align: center;
         position: relative;
         z-index: 1;
+    }
+    
+    .timeline-section {
+        width: 180px;
     }
     
     .timeline-dot {
@@ -206,12 +227,13 @@
         height: 14px;
         background: #c2b59b;
         border-radius: 50%;
-        margin: 0 auto;
+        margin: 10px auto;
     }
     
     .timeline-time {
         font-weight: bold;
         font-size: 16px;
+        margin-bottom: 10px;
     }
     
     .timeline-text {
@@ -245,13 +267,39 @@
         }
         .hamburger {
             display: block;
+            z-index: 9999;
         }
+        /* ===== MOBILE TIMELINE ===== */
         .timeline-line {
             display: none;
         }
         .timeline-grid {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, auto);
-            gap: 40px;
+            flex-direction: column;
+            text-align: start;
+        }
+        .timeline-section {
+            width: unset;
+            margin-left: 5px;
+        }
+        /* vertical line */
+        .timeline-grid::before {
+            content: "";
+            position: absolute;
+            left: 11px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #c2b59b;
+        }
+        .timeline-dot {
+            margin: 0;
+            display: inline-block;
+        }
+        .timeline-time {
+            display: inline;
+            margin-left: 10px;
+        }
+        .timeline-text {
+            margin-left: 40px;
         }
     }
