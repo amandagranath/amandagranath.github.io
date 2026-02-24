@@ -133,6 +133,37 @@
         font-style: normal;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     }
+    
+    .toast-images {
+        display: flex;
+        justify-content: center;
+        /* centers images horizontally */
+        align-items: center;
+        gap: 16px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+        /* allows wrapping on smaller screens */
+    }
+    
+    .toast-images img {
+        width: 100%;
+        max-width: 280px;
+        /* control size */
+        height: auto;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+    /* Mobile */
+    
+    @media (max-width: 600px) {
+        .toast-images {
+            flex-direction: column;
+        }
+        .toast-images img {
+            max-width: 90%;
+            /* slightly larger on phone */
+        }
+    }
     /* TABLET */
     
     @media (max-width: 1200px) {
